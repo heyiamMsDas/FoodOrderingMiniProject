@@ -38,7 +38,7 @@ WHERE OrderDate >= CURRENT_DATE - INTERVAL 7 DAY;
 
 -- Identify customers who placed the highest number of orders 
 
-SELECT COUNT(DISTINCT OrderID) AS OrdersLastWeek
+-- here ------
 SELECT c.Name, COUNT(DISTINCT o.OrderID) AS TotalOrders
 FROM Orders o
 JOIN Customers c ON o.CustomerID = c.CustomerID
